@@ -2,6 +2,10 @@
 
 This project is a stylish and interactive city search application with a neon theme. It was created to perform QA automation testing and explore how to test functionalities using frameworks such as Selenium, Cypress, and Playwright.
 
+
+[![web.jpg](https://i.postimg.cc/fWtZ267n/web.jpg)](https://postimg.cc/dDYzDNS4)
+
+
 ## Features
 
 - Dynamic search functionality
