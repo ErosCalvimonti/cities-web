@@ -1,95 +1,142 @@
 const cities = [
-    {"name": "New York", "country": "USA", "population": 8336817},
-    {"name": "Los Angeles", "country": "USA", "population": 3898747},
-    {"name": "Chicago", "country": "USA", "population": 2746388},
-    {"name": "Buenos Aires", "country": "Argentina", "population": 2891000},
-    {"name": "Córdoba", "country": "Argentina", "population": 1330023},
-    {"name": "Rosario", "country": "Argentina", "population": 1193605},
-    {"name": "Tokyo", "country": "Japan", "population": 37393128},
-    {"name": "Delhi", "country": "India", "population": 30290936},
-    {"name": "Shanghai", "country": "China", "population": 27058480},
-    {"name": "São Paulo", "country": "Brazil", "population": 22043028},
-    {"name": "Mexico City", "country": "Mexico", "population": 21782378},
-    {"name": "Cairo", "country": "Egypt", "population": 20484965},
-    {"name": "Mumbai", "country": "India", "population": 20411274},
-    {"name": "Beijing", "country": "China", "population": 20384000},
-    {"name": "Dhaka", "country": "Bangladesh", "population": 20283552},
-    {"name": "Karachi", "country": "Pakistan", "population": 15400000},
-    {"name": "Istanbul", "country": "Turkey", "population": 15029231},
-    {"name": "Moscow", "country": "Russia", "population": 12506468},
-    {"name": "Manila", "country": "Philippines", "population": 13923452},
-    {"name": "Jakarta", "country": "Indonesia", "population": 10899200},
-    {"name": "Lagos", "country": "Nigeria", "population": 14205000},
-    {"name": "Kinshasa", "country": "DR Congo", "population": 14900000},
-    {"name": "Lima", "country": "Peru", "population": 9674755},
-    {"name": "Bangkok", "country": "Thailand", "population": 10539000},
-    {"name": "Kolkata", "country": "India", "population": 14850968},
-    {"name": "Tehran", "country": "Iran", "population": 8846782},
-    {"name": "Bogotá", "country": "Colombia", "population": 7776845},
-    {"name": "London", "country": "UK", "population": 8982000},
-    {"name": "Hong Kong", "country": "China", "population": 7451000},
-    {"name": "Baghdad", "country": "Iraq", "population": 7200000},
-    {"name": "Chennai", "country": "India", "population": 11022000},
-    {"name": "Riyadh", "country": "Saudi Arabia", "population": 6506700},
-    {"name": "Santiago", "country": "Chile", "population": 6814000},
-    {"name": "Singapore", "country": "Singapore", "population": 5607283},
-    {"name": "Rio de Janeiro", "country": "Brazil", "population": 6748000},
-    {"name": "Shenzhen", "country": "China", "population": 12528300},
-    {"name": "Seoul", "country": "South Korea", "population": 9776000},
-    {"name": "Wuhan", "country": "China", "population": 11212000},
-    {"name": "Hyderabad", "country": "India", "population": 10054500},
-    {"name": "Ahmedabad", "country": "India", "population": 8251000},
-    {"name": "Paris", "country": "France", "population": 11020000},
-    {"name": "Lusaka", "country": "Zambia", "population": 3340000},
-    {"name": "Khartoum", "country": "Sudan", "population": 5283000},
-    {"name": "Johannesburg", "country": "South Africa", "population": 5613000},
-    {"name": "Cape Town", "country": "South Africa", "population": 4337000},
-    {"name": "Durban", "country": "South Africa", "population": 3442000},
-    {"name": "Pretoria", "country": "South Africa", "population": 2921000},
-    {"name": "Nairobi", "country": "Kenya", "population": 4397073},
-    {"name": "Abidjan", "country": "Côte d'Ivoire", "population": 4765000},
-    {"name": "Dar es Salaam", "country": "Tanzania", "population": 7113000},
-    {"name": "Addis Ababa", "country": "Ethiopia", "population": 4783000},
-    {"name": "Accra", "country": "Ghana", "population": 2272000},
-    {"name": "Kampala", "country": "Uganda", "population": 1752000},
-    {"name": "Kigali", "country": "Rwanda", "population": 1267000},
-    {"name": "Casablanca", "country": "Morocco", "population": 3512000},
-    {"name": "Algiers", "country": "Algeria", "population": 3415811},
-    {"name": "Fes", "country": "Morocco", "population": 1210000},
-    {"name": "Tunis", "country": "Tunisia", "population": 2746000},
-    {"name": "Tripoli", "country": "Libya", "population": 1205000},
-    {"name": "Ouagadougou", "country": "Burkina Faso", "population": 2453496},
-    {"name": "Niamey", "country": "Niger", "population": 1216000},
-    {"name": "Lomé", "country": "Togo", "population": 1743000},
-    {"name": "Bamako", "country": "Mali", "population": 3221000},
-    {"name": "Luanda", "country": "Angola", "population": 8235000},
-    {"name": "Gaborone", "country": "Botswana", "population": 231626},
-    {"name": "Windhoek", "country": "Namibia", "population": 431000},
-    {"name": "Maputo", "country": "Mozambique", "population": 1220000},
-    {"name": "Harare", "country": "Zimbabwe", "population": 1742000},
-    {"name": "Bujumbura", "country": "Burundi", "population": 1897000},
-    {"name": "Djibouti", "country": "Djibouti", "population": 562000},
-    {"name": "Asmara", "country": "Eritrea", "population": 963000},
-    {"name": "Libreville", "country": "Gabon", "population": 703939},
-    {"name": "Malabo", "country": "Equatorial Guinea", "population": 297000},
-    {"name": "Nouakchott", "country": "Mauritania", "population": 1119000},
-    {"name": "Conakry", "country": "Guinea", "population": 2049000},
-    {"name": "Dakar", "country": "Senegal", "population": 1038000},
-    {"name": "Monrovia", "country": "Liberia", "population": 1010970},
-    {"name": "Freetown", "country": "Sierra Leone", "population": 1113200},
-    {"name": "Antananarivo", "country": "Madagascar", "population": 1707000},
-    {"name": "Port Louis", "country": "Mauritius", "population": 149194},
-    {"name": "Moroni", "country": "Comoros", "population": 111329},
-    {"name": "Victoria", "country": "Seychelles", "population": 27508},
-    {"name": "Mbabane", "country": "Eswatini", "population": 94500},
-    {"name": "Sao Tome", "country": "Sao Tome and Principe", "population": 71947},
-    {"name": "Juba", "country": "South Sudan", "population": 525953},
-    {"name": "Brazzaville", "country": "Republic of the Congo", "population": 1875000},
-    {"name": "Bangui", "country": "Central African Republic", "population": 889231},
-    {"name": "N'Djamena", "country": "Chad", "population": 1201403},
-    {"name": "Khartoum", "country": "Sudan", "population": 5283000},
-    {"name": "Mogadishu", "country": "Somalia", "population": 2761000}
+    // USA
+    {"name": "New York", "country": "USA", "state": "New York", "population": 8336817},
+    {"name": "Los Angeles", "country": "USA", "state": "California", "population": 3898747},
+    {"name": "Chicago", "country": "USA", "state": "Illinois", "population": 2746388},
+    {"name": "Houston", "country": "USA", "state": "Texas", "population": 2310000},
+
+    // Argentina
+    {"name": "Buenos Aires", "country": "Argentina", "state": "Buenos Aires", "population": 2891000},
+    {"name": "Córdoba", "country": "Argentina", "state": "Córdoba", "population": 1330023},
+    {"name": "Rosario", "country": "Argentina", "state": "Santa Fe", "population": 1193605},
+    {"name": "Mendoza", "country": "Argentina", "state": "Mendoza", "population": 1150418},
+
+    // Japan
+    {"name": "Tokyo", "country": "Japan", "state": "Tokyo", "population": 37393128},
+    {"name": "Osaka", "country": "Japan", "state": "Osaka", "population": 19222665},
+    {"name": "Kyoto", "country": "Japan", "state": "Kyoto", "population": 1474570},
+    {"name": "Yokohama", "country": "Japan", "state": "Kanagawa", "population": 3726167},
+
+    // India
+    {"name": "Delhi", "country": "India", "state": "Delhi", "population": 30290936},
+    {"name": "Mumbai", "country": "India", "state": "Maharashtra", "population": 20411274},
+    {"name": "Bangalore", "country": "India", "state": "Karnataka", "population": 8443675},
+    {"name": "Chennai", "country": "India", "state": "Tamil Nadu", "population": 11022000},
+
+    // China
+    {"name": "Shanghai", "country": "China", "state": "Shanghai", "population": 27058480},
+    {"name": "Beijing", "country": "China", "state": "Beijing", "population": 20384000},
+    {"name": "Guangzhou", "country": "China", "state": "Guangdong", "population": 18812700},
+    {"name": "Shenzhen", "country": "China", "state": "Guangdong", "population": 12528300},
+
+    // Brazil
+    {"name": "São Paulo", "country": "Brazil", "state": "São Paulo", "population": 22043028},
+    {"name": "Rio de Janeiro", "country": "Brazil", "state": "Rio de Janeiro", "population": 6748000},
+    {"name": "Brasília", "country": "Brazil", "state": "Distrito Federal", "population": 3015268},
+    {"name": "Salvador", "country": "Brazil", "state": "Bahia", "population": 2677000},
+
+    // Mexico
+    {"name": "Mexico City", "country": "Mexico", "state": "CDMX", "population": 21782378},
+    {"name": "Guadalajara", "country": "Mexico", "state": "Jalisco", "population": 1503139},
+    {"name": "Monterrey", "country": "Mexico", "state": "Nuevo León", "population": 1135512},
+    {"name": "Puebla", "country": "Mexico", "state": "Puebla", "population": 1682407},
+
+    // Egypt
+    {"name": "Cairo", "country": "Egypt", "state": "Cairo", "population": 20484965},
+    {"name": "Alexandria", "country": "Egypt", "state": "Alexandria", "population": 5194000},
+    {"name": "Giza", "country": "Egypt", "state": "Giza", "population": 8743000},
+    {"name": "Shubra El-Kheima", "country": "Egypt", "state": "Qalyubia", "population": 11216000},
+
+    // Russia
+    {"name": "Moscow", "country": "Russia", "state": "Moscow", "population": 12506468},
+    {"name": "Saint Petersburg", "country": "Russia", "state": "Leningrad", "population": 5383968},
+    {"name": "Novosibirsk", "country": "Russia", "state": "Novosibirsk", "population": 1625600},
+    {"name": "Yekaterinburg", "country": "Russia", "state": "Sverdlovsk", "population": 1483119},
+
+    // UK
+    {"name": "London", "country": "UK", "state": "England", "population": 8982000},
+    {"name": "Birmingham", "country": "UK", "state": "England", "population": 1141816},
+    {"name": "Leeds", "country": "UK", "state": "England", "population": 793139},
+    {"name": "Glasgow", "country": "UK", "state": "Scotland", "population": 635640},
+
+    // Germany
+    {"name": "Berlin", "country": "Germany", "state": "Berlin", "population": 3669491},
+    {"name": "Hamburg", "country": "Germany", "state": "Hamburg", "population": 1841179},
+    {"name": "Munich", "country": "Germany", "state": "Bavaria", "population": 1471508},
+    {"name": "Cologne", "country": "Germany", "state": "North Rhine-Westphalia", "population": 1080394},
+
+    // France
+    {"name": "Paris", "country": "France", "state": "Île-de-France", "population": 11020000},
+    {"name": "Marseille", "country": "France", "state": "Provence-Alpes-Côte d'Azur", "population": 861635},
+    {"name": "Lyon", "country": "France", "state": "Auvergne-Rhône-Alpes", "population": 513275},
+    {"name": "Toulouse", "country": "France", "state": "Occitanie", "population": 471941},
+
+    // Italy
+    {"name": "Rome", "country": "Italy", "state": "Lazio", "population": 2872800},
+    {"name": "Milan", "country": "Italy", "state": "Lombardy", "population": 1366180},
+    {"name": "Naples", "country": "Italy", "state": "Campania", "population": 962003},
+    {"name": "Turin", "country": "Italy", "state": "Piedmont", "population": 870456},
+
+    // Australia
+    {"name": "Sydney", "country": "Australia", "state": "New South Wales", "population": 5312163},
+    {"name": "Melbourne", "country": "Australia", "state": "Victoria", "population": 5078193},
+    {"name": "Brisbane", "country": "Australia", "state": "Queensland", "population": 2514184},
+    {"name": "Perth", "country": "Australia", "state": "Western Australia", "population": 2109164},
+
+    // Canada
+    {"name": "Toronto", "country": "Canada", "state": "Ontario", "population": 2731571},
+    {"name": "Montreal", "country": "Canada", "state": "Quebec", "population": 1704694},
+    {"name": "Vancouver", "country": "Canada", "state": "British Columbia", "population": 631486},
+    {"name": "Calgary", "country": "Canada", "state": "Alberta", "population": 1239220},
+
+    // Spain
+    {"name": "Madrid", "country": "Spain", "state": "Madrid", "population": 3223334},
+    {"name": "Barcelona", "country": "Spain", "state": "Catalonia", "population": 1620343},
+    {"name": "Valencia", "country": "Spain", "state": "Valencia", "population": 791413},
+    {"name": "Seville", "country": "Spain", "state": "Andalusia", "population": 688711},
+
+    // South Africa
+    {"name": "Johannesburg", "country": "South Africa", "state": "Gauteng", "population": 5613000},
+    {"name": "Cape Town", "country": "South Africa", "state": "Western Cape", "population": 4337000},
+    {"name": "Durban", "country": "South Africa", "state": "KwaZulu-Natal", "population": 3442361},
+    {"name": "Pretoria", "country": "South Africa", "state": "Gauteng", "population": 741651},
+
+    // Nigeria
+    {"name": "Lagos", "country": "Nigeria", "state": "Lagos", "population": 13900000},
+    {"name": "Kano", "country": "Nigeria", "state": "Kano", "population": 3659000},
+    {"name": "Ibadan", "country": "Nigeria", "state": "Oyo", "population": 3565108},
+    {"name": "Abuja", "country": "Nigeria", "state": "FCT", "population": 1235880},
+
+    // Indonesia
+    {"name": "Jakarta", "country": "Indonesia", "state": "DKI Jakarta", "population": 10770487},
+    {"name": "Surabaya", "country": "Indonesia", "state": "East Java", "population": 2886676},
+    {"name": "Bandung", "country": "Indonesia", "state": "West Java", "population": 2631235},
+    {"name": "Medan", "country": "Indonesia", "state": "North Sumatra", "population": 2525162},
+
+    // Pakistan
+    {"name": "Karachi", "country": "Pakistan", "state": "Sindh", "population": 15741000},
+    {"name": "Lahore", "country": "Pakistan", "state": "Punjab", "population": 12085000},
+    {"name": "Faisalabad", "country": "Pakistan", "state": "Punjab", "population": 3203846},
+    {"name": "Rawalpindi", "country": "Pakistan", "state": "Punjab", "population": 2200000},
+
+    // Bangladesh
+    {"name": "Dhaka", "country": "Bangladesh", "state": "Dhaka", "population": 21294410},
+    {"name": "Chittagong", "country": "Bangladesh", "state": "Chittagong", "population": 3920222},
+    {"name": "Khulna", "country": "Bangladesh", "state": "Khulna", "population": 663342},
+    {"name": "Rajshahi", "country": "Bangladesh", "state": "Rajshahi", "population": 763952},
+
+    // Turkey
+    {"name": "Istanbul", "country": "Turkey", "state": "Istanbul", "population": 15067724},
+    {"name": "Ankara", "country": "Turkey", "state": "Ankara", "population": 5445000},
+    {"name": "Izmir", "country": "Turkey", "state": "Izmir", "population": 4320519},
+    {"name": "Bursa", "country": "Turkey", "state": "Bursa", "population": 2901396},
+
+    // South Korea
+    {"name": "Seoul", "country": "South Korea", "state": "Seoul", "population": 9733509},
+    {"name": "Incheon", "country": "South Korea", "state": "Incheon", "population": 2957026},
+    {"name": "Daegu", "country": "South Korea", "state": "Daegu", "population": 2431254}
 ];
+
 
 const searchInput = document.getElementById('searchInput');
 const cityList = document.getElementById('cityList');
@@ -98,8 +145,7 @@ function displayCities(cities) {
     cityList.innerHTML = cities.map(city => 
         `<li>
             <div>
-                <span class="city-name">${city.name}</span>
-                <span class="city-info">, ${city.country}</span>
+                <span class="city-name">${city.name}, ${city.country}</span>
             </div>
             <span class="city-population">
                 <i class="fas fa-users"></i> ${city.population.toLocaleString()}
