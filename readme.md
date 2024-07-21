@@ -1,4 +1,4 @@
-# Neon City Search - QA Automation Testing
+# City Search - QA Automation Testing
 
 This project is a stylish and interactive city search application with a neon theme. It was created to perform QA automation testing and explore how to test functionalities using frameworks such as Selenium, Cypress, and Playwright.
 
